@@ -1,0 +1,351 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* nav bar */
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  padding: 0% 2.5rem;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  position: sticky;
+  top: 0;
+}
+
+nav {
+  /* background-color: transparent; */
+  z-index: 1;
+}
+
+* {
+  margin: 0%;
+  border: 0%;
+  padding: 0%;
+}
+
+ul {
+  list-style: none;
+}
+.nav-item-cont {
+  display: flex;
+  gap: 2rem;
+  font-size: xx-large;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 2;
+  font-family: "Source Serif 4", serif;
+  position: relative;
+  transition: color 0.3s ease;
+  font-size: x-large;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: #f8fbf9;
+  transform: scaleX(0);
+  transform-origin: 0% 50%;
+  transition: transform 0.3s ease, bottom 0.3s ease;
+}
+
+a:hover::after {
+  transform: scaleX(1);
+  bottom: 0;
+}
+
+a:hover {
+  color: #c0c0c0;
+  color: #a0a0a0;
+}
+
+#logo-img {
+  padding: 10px;
+  height: 5rem;
+  /* border-radius: 50%; */
+  width: 6rem;
+}
+
+.menu-drop ul {
+  list-style: none;
+}
+
+.menu-drop ul li {
+  margin-top: 8px;
+}
+
+/* hero */
+#hero {
+  background-image: url(./img/building.jpg);
+  height: 100vh;
+  position: relative;
+  width: 100%;
+  background-size: cover;
+  top: -104px;
+  z-index: -1;
+  color: #fff;
+}
+
+#hero > h1 {
+  color: #eee;
+  position: absolute;
+  right: 10%;
+  top: 30vh;
+  /* font-family: 'KG Tangled Up In You 2'; */
+  font-size: 8rem;
+  font-family: "Bubblegum Sans", cursive;
+}
+
+#hero > h1 > span {
+  position: absolute;
+  bottom: -120px;
+  left: 60px;
+}
+#hero > h2 {
+  color: #96918f;
+  position: absolute;
+  top: 31rem;
+  left: 65rem;
+}
+
+/* student cards */
+
+/********Menu**********/
+#floor-1 {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+}
+#floor-2 {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+}
+
+/*cards*/
+.card-side.back {
+  transform: rotateY(-180deg);
+  /* background-color: #4158D0; */
+  /* background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  ); */
+  /* background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 90%); */
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(176, 229, 208, 1) 42%,
+    rgba(92, 202, 238, 0.41) 93.6%
+  );
+
+  border-radius: 15px;
+}
+/* .card-side.front { */
+/* background-color: #0093E9; */
+/* background-image: url(./img/Screenshot\ 2024-01-11\ at\ 12.00.31ΓÇ»PM.png); */
+/* background-size: contain; */
+/* background-blend-mode: color-burn; */
+/* } */
+
+.card:hover .card-side.front {
+  transform: rotateY(180deg);
+}
+
+.card:hover .card-side.back {
+  transform: rotateY(0deg);
+}
+.card {
+  perspective: 150rem;
+  margin: 2em auto;
+  height: 25.2rem;
+  width: 300px;
+  box-shadow: none;
+  background: none;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  position: relative;
+  border-radius: 15px;
+  background-image: url(./imgs/logo-img.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.card-side {
+  height: 25rem;
+  border-radius: 15px;
+  transition: all 0.8s ease;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* padding: 2rem; */
+  color: white;
+}
+
+.menu-cont {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 95%;
+  height: 65vh;
+  border-radius: 15px;
+  background-image: linear-gradient(135deg, #fdfcfb 50%, #e2d1c3 100%);
+  box-shadow: -2px 3px 21px 2px rgba(0, 0, 0, 0.63);
+  -webkit-box-shadow: -2px 3px 21px 2px rgba(0, 0, 0, 0.63);
+  -moz-box-shadow: -2px 3px 21px 2px rgba(0, 0, 0, 0.63);
+}
+
+.img > img {
+  width: 100%;
+  height: 25.5rem;
+  border-radius: 15px;
+}
+.menu-btn {
+  height: 10vh;
+}
+
+h1 {
+  font-family: "ADLaM Display", cursive;
+  color: #5d5d5d;
+  font-size: 5rem;
+}
+
+.back > div > h2 {
+  color: #000000;
+  text-align: center;
+  text-decoration: dashed;
+  font-size: x-large;
+  position: relative;
+  top: 20px;
+  font-family: "Playfair Display", serif;
+}
+.back > div > p {
+  color: #000000;
+  position: relative;
+  top: 30px;
+  font-size: small;
+  font-family: "Poppins", sans-serif;
+  margin: 10px;
+}
+
+.card-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.std-cont {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.back-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.std-img {
+  width: 120px;
+  height: 150px;
+  border: solid 2px;
+  box-shadow: 13px 12px 10px 0px rgba(81, 207, 102, 0.75);
+  -webkit-box-shadow: 13px 12px 10px 0px rgba(81, 207, 102, 0.75);
+  -moz-box-shadow: 13px 12px 10px 0px rgba(81, 207, 102, 0.75);
+  background-image: url(./img/Unknown-3.webp);
+  background-size: 100px 150px;
+  border-radius: 50%;
+}
+.std-img-1 {
+  width: 120px;
+  height: 150px;
+  border: solid 2px;
+  background-image: url(./img/Unknown-3.webp);
+  box-shadow: 13px 12px 10px 0px rgba(250, 82, 82, 0.75);
+  -webkit-box-shadow: 13px 12px 10px 0px rgba(250, 82, 82, 0.75);
+  -moz-box-shadow: 13px 12px 10px 0px rgba(250, 82, 82, 0.75);
+  background-size: 100px 150px;
+  border-radius: 50%;
+}
+/* 
+.std-image > img {
+  width: 30px;
+  height: 20px;
+} */
+
+.room-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-left: 50px;
+}
+
+#popup-container {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  z-index: 999;
+  background-image: url(./img/WhatsApp\ Image\ 2024-01-11\ at\ 13.13.20_c1c734fc.jpg);
+  background-size: cover;
+  height: 65vh;
+  width: 42vh;
+}
+
+#popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+}
+
+#card {
+  width: 200px;
+  height: 300px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.pop-img {
+  border-radius: 50%;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.info-contt {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
